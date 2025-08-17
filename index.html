@@ -1,0 +1,124 @@
+<html><head><base href="not_real.com">
+<meta charset="UTF-8">
+<title>сайт чая с трояном</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    color: #33ff33;
+    font-family: 'Pixelify Sans', cursive;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  header {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #33ff33;
+  }
+
+  .logo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  nav {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  nav a {
+    color: #33ff33;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 24px;
+    transition: all 0.3s;
+  }
+
+  nav a:hover {
+    color: #ff3333;
+    text-shadow: 0 0 10px #ff3333;
+  }
+
+  .content {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 2px solid #33ff33;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .glitch-effect {
+    animation: glitch 1s infinite;
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="https://i.ibb.co/wp8nqtY/channels4-profile.png" alt="Meow" width="200" height="200">
+    <h1 class="glitch-effect">чай с трояном ее</h1>
+  </header>
+
+  <nav>
+    <a href="https://www.youtube.com/@Чай_сТрояном" target="_blank">YouTube</a>
+    <a href="https://dsc.gg/teawithtrojan" target="_blank">Discord</a>
+  </nav>
+
+  <div class="container">
+    <div class="content">
+      <h2>Добро пожаловать на сайт чая с трояном!</h2>
+      <p>тут все мои соцсети :D</p>
+      
+      <div id="viruses" class="content">
+        <h2>Зачем этот сайт?</h2>
+        <ul>
+          <li>я хз я иза скуки сделал</li>
+          <li>кстати зайди в дискорд пжпжпж</li>
+          <li>как дела кста?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      
+      const glitchElements = document.querySelectorAll('.glitch-effect');
+      glitchElements.forEach(element => {
+        if (Math.random() > 0.99) {
+          element.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px)`;
+          setTimeout(() => {
+            element.style.transform = 'translate(0, 0)';
+          }, 100);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
